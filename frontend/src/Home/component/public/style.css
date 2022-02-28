@@ -1,0 +1,36 @@
+.side-list-panel {
+    --side-list-box-color: #EBE9E7;
+    --side-list-width: 320px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.side-list {
+    background-color: var(--side-list-box-color);
+    width: var(--side-list-width);
+    height: 100%;
+}
+
+.side-list-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-list-box::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+
+.side-list-panel-main-part {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}

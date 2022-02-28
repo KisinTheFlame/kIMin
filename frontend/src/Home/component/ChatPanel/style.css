@@ -1,0 +1,23 @@
+:root {
+    --chat-list-box-color: #EBE9E7;
+    --chat-history-scope-color: #F5F5F5;
+    --chat-send-scope-color: #FFFFFF;
+}
+
+.chat-history-scope {
+    background-color: var(--chat-history-scope-color);
+    width: 100%;
+    flex: 1;
+}
+
+.chat-send-scope {
+    background-color: var(--chat-send-scope-color);
+    height: 180px;
+    width: 100%;
+}
+
+.chat-send-button-row {
+    background-color: var(--chat-send-scope-color);
+    height: 40px;
+    width: 100%;
+}

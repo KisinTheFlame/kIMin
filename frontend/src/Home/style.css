@@ -1,0 +1,43 @@
+:root {
+    --side-menu-bar-width: 70px;
+    --side-menu-bar-color: #2E2E2E;
+    --side-menu-bar-item-box-padding: 15px;
+    --side-menu-bar-item-size: 40px;
+}
+
+.home-layout {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0 0;
+    display: flex;
+}
+
+.side-menu-bar {
+    background-color: var(--side-menu-bar-color);
+    width: var(--side-menu-bar-width);
+    height: 100%;
+}
+
+.main-window {
+    background-color: aquamarine;
+    height: 100%;
+    flex: 1;
+}
+
+.side-menu-bar-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-menu-bar-item-box {
+    box-sizing: border-box;
+    width: var(--side-menu-bar-width);
+    height: var(--side-menu-bar-width);
+    padding: calc((var(--side-menu-bar-width) - var(--side-menu-bar-item-size)) / 2);
+}
+

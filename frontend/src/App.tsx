@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {HomeContainer} from './Home';
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+    return (
+        <HomeContainer/>
+    );
 }
 
 export default App;

@@ -17,10 +17,10 @@ public class MessageDTO {
 
     public static MessageDTO from(Message message) {
         return new MessageDTO(
-                message.getSenderAccountNumber(),
-                message.getReceiverAccountNumber(),
-                message.getType(),
-                message.getContent()
+                message.getSenderAccountNumber().getNumber(),
+                message.getReceiverAccountNumber().getNumber(),
+                message.getType().getName(),
+                message.getContent().getContent()
         );
     }
 

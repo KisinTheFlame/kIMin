@@ -1,14 +1,14 @@
 package tech.kisin.kimin.entity;
 
 public class TextMessage extends Message {
-    private static final String TYPE = "TEXT";
+    private static final Message.Type TYPE = new Type("TEXT");
 
-    public TextMessage(Integer senderAccountNumber, Integer receiverAccountNumber, String content) {
+    public TextMessage(AccountNumber senderAccountNumber, AccountNumber receiverAccountNumber, Message.Content content) {
         super(senderAccountNumber, receiverAccountNumber, content);
     }
 
     @Override
-    public String getType() {
+    public Message.Type getType() {
         return TYPE;
     }
 }

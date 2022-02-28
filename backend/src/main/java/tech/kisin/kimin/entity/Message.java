@@ -6,13 +6,13 @@ public abstract class Message {
     private AccountNumber receiverAccountNumber;
     private Content content;
 
-    public Message(AccountNumber senderAccountNumber, AccountNumber receiverAccountNumber, Message.Content content) {
+    public Message(AccountNumber senderAccountNumber, AccountNumber receiverAccountNumber, Content content) {
         this.senderAccountNumber = senderAccountNumber;
         this.receiverAccountNumber = receiverAccountNumber;
         this.content = content;
     }
 
-    public abstract Message.Type getType();
+    public abstract Type getType();
 
     public AccountNumber getSenderAccountNumber() {
         return senderAccountNumber;

@@ -10,20 +10,6 @@ public class User {
     private Salt salt;
     private Token token;
 
-    public static class Username {
-        private final String username;
-
-        public Username(String username) {
-            if (username == null) throw new ValidationException("Username cannot be null.");
-            if (username.equals("")) throw new ValidationException("Username cannot be blank.");
-            this.username = username;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-    }
-
     public static class Password {
         public static final Integer LENGTH = 256;
 

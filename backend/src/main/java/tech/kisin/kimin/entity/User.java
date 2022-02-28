@@ -3,10 +3,25 @@ package tech.kisin.kimin.entity;
 import tech.kisin.kimin.exception.ValidationException;
 
 public class User {
+
+    private AccountNumber accountNumber;
     private Username username;
     private Password password;
     private Salt salt;
     private Token token;
+
+    public static class AccountNumber {
+        private final Integer number;
+
+        public AccountNumber(Integer number) {
+            if (number == null) throw new ValidationException("Account number cannot be null.");
+            this.number = number;
+        }
+
+        public Integer getNumber() {
+            return number;
+        }
+    }
 
     public static class Username {
         private final String username;

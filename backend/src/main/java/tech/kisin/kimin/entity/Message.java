@@ -1,5 +1,7 @@
 package tech.kisin.kimin.entity;
 
+import tech.kisin.kimin.exception.FactoryCreateFailException;
+
 public abstract class Message {
 
     private AccountNumber senderAccountNumber;
@@ -38,6 +40,15 @@ public abstract class Message {
         this.content = content;
     }
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "senderAccountNumber=" + senderAccountNumber.getNumber() +
+                ", receiverAccountNumber=" + receiverAccountNumber.getNumber() +
+                ", content=" + content.getContent() +
+                '}';
+    }
+
     public static class Content {
         private String content;
 
@@ -67,6 +78,25 @@ public abstract class Message {
 
         public void setName(String name) {
             this.name = name;
+        }
+    }
+
+    public static class Factory {
+        public static Message create(
+                Integer senderAccountNumber,
+                Integer receiverAccountNumber,
+                String type,
+                String content
+        ) {
+            if ("TEXT".equalsIgnoreCase(type)) {
+                return new TextMessage(
+                        new AccountNumber(senderAccountNumber),
+                        new AccountNumber(receiverAccountNumber),
+                        new Content(content)
+                );
+            } else {
+                throw new FactoryCreateFailException();
+            }
         }
     }
 }
